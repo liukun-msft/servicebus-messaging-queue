@@ -10,7 +10,7 @@ public class MessagingConfiguration {
 
     private static final Logger LOGGER  = LoggerFactory.getLogger(MessagingConfiguration.class);
 
-    @ServiceBusListener(destination = "queue-001", concurrency = "10")
+    @ServiceBusListener(destination = "que001", concurrency = "4")
     public void handleMessageFromServiceBus(String message) {
         LOGGER.info("New Service Bus queue message received: '{}'", message);
     }
@@ -19,7 +19,8 @@ public class MessagingConfiguration {
 //    PropertiesSupplier<ConsumerIdentifier, ProcessorProperties> supplyTest(){
 //        return key -> {
 //            ProcessorProperties processorProperties = new ProcessorProperties();
-//            processorProperties.setMaxConcurrentCalls(10);
+////            processorProperties.setMaxConcurrentCalls(7);
+//            processorProperties.setAutoComplete(false);
 //            return processorProperties;
 //        };
 //    }

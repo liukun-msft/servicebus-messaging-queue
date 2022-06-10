@@ -2,12 +2,8 @@ spring:
   cloud:
     azure:
       servicebus:
-        connection-string: <servicebus-connection-string>
-        queue-name: queue-001
-        entity-type: topic
-        processor:
-          auto-complete: true
-          max-concurrent-calls: 10
+        connection-string: <servicebus-namespace>
+        entity-type: queue
 debug: true
 logging:
   level:
