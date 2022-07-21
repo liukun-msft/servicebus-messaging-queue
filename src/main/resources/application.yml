@@ -2,9 +2,8 @@ spring:
   cloud:
     azure:
       servicebus:
-        connection-string: <servicebus-namespace>
+        connection-string: <your-service-bus-connection-string>
         entity-type: queue
-debug: true
 logging:
   level:
     com.azure.messaging: warn

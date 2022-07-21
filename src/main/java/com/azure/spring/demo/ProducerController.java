@@ -14,7 +14,7 @@ public class ProducerController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ProducerController.class);
 
-    private static final String QUEUE_NAME = "que001";
+    private static final String QUEUE_NAME = "SERVICE_BUS_QUEUE_NAME";
 
     @Autowired
     private ServiceBusTemplate template;
